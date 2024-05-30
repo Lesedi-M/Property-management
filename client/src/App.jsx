@@ -7,6 +7,7 @@ import {
  import Layout from "./routes/layout/layout";
 import SinglePage from "./routes/singlePage/SinglePage";
 import Login from "./routes/login/Login";
+import ProfilePage from "./routes/profile/ProfilePage";
  
 
 
@@ -33,6 +34,10 @@ function App() {
        {
         path:"/login",
         element: <Login/>
+       },
+       {
+        path:"/profile",
+        element: <ProfilePage/>
        },
       ]
     }  
