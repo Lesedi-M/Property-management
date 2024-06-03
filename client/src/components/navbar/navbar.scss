@@ -108,6 +108,12 @@ nav {
 
     .register {
       background-color: #fece51;
+      height: 50px;
+
+      @include sm{
+        height: 60px;
+      }
+
     }
 
     .menuIcon {
@@ -148,6 +154,7 @@ nav {
         a {
           display: initial;
         }
+        
       }
     }
   }

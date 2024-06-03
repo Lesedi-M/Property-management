@@ -52,19 +52,22 @@ export const login = async (req,res)=>{
        const age = 1000 * 60 * 60 * 24 * 7
 
        const token = jwt.sign({
-        id:user.id
-       }, process.env.JWT_SECRET_KEY,
+        id:user.id,
+        isAdmin: false,
+       },
+        process.env.JWT_SECRET_KEY,
        {expiresIn: age}
-    )
+    );
 
-      
+    const {password:userPassword, ...userInfo} = user
+    
        res.cookie("token", token, {
         httpOnly: true,
         //secure:true,
         maxAge: age,
        })
        .status(200)
-       .json({message: "Login Successful"});
+       .json(userInfo);
        
     }catch(err){
         console.log(err)
