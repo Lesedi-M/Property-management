@@ -3,7 +3,7 @@ import List from "../../components/list/List";
 import apiRequest from "../../lib/apiRequest";
 import {  useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import { useContext } from "react";
+import { useContext} from "react";
 import "./profilePage.scss";
 
 function ProfilePage() {
@@ -23,6 +23,7 @@ function ProfilePage() {
   }
 
   return (
+  
     <div className="profilePage">
       <div className="details">
         <div className="wrapper">
@@ -63,6 +64,7 @@ function ProfilePage() {
         </div>
       </div>
     </div>
+    
   );
 }
 
