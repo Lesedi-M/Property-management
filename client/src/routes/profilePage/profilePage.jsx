@@ -1,5 +1,5 @@
 import  { useContext, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import Chat from "../../components/chat/Chat";
 import List from "../../components/list/List";
 import apiRequest from "../../lib/apiRequest";
@@ -36,12 +36,12 @@ function ProfilePage() {
         <div className="wrapper">
           <div className="title">
             <h1>User Information</h1>
-            <button>Update Profile</button>
+           <Link to="/profile/update"><button>Update Profile</button></Link> 
           </div>
           <div className="info">
             <span>
-              Avatar:
-              <img src={currentUser.avatar || "noavatar.jpg"} alt="" />
+              Avater:
+              <img src={currentUser.avater || "noavatar.jpg"} alt="" />
             </span>
             <span>
               Username: <b>{currentUser.username}</b>

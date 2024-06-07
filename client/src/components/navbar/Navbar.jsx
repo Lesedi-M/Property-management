@@ -24,7 +24,7 @@ function Navbar() {
       <div className="right">
       {currentUser ? (
           <div className="user">
-            <img src={currentUser.avatar || "https://t4.ftcdn.net/jpg/03/59/58/91/360_F_359589186_JDLl8dIWoBNf1iqEkHxhUeeOulx0wOC5.jpg"} alt="" />
+            <img src={currentUser.avater || "https://t4.ftcdn.net/jpg/03/59/58/91/360_F_359589186_JDLl8dIWoBNf1iqEkHxhUeeOulx0wOC5.jpg"} alt="" />
             <span>{currentUser.username}</span>
             <Link to="/profile" className="profile">
              <div className="notification">3</div>
@@ -51,8 +51,10 @@ function Navbar() {
           <a href="/">About</a>
           <a href="/">Contact</a>
           <a href="/">Agents</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+          <a href="/login">Sign in</a>
+          <a href="/register">Sign up</a>
+          <a href="/profile">Profile</a>
+
         </div>
       </div>
     </nav>
