@@ -21,6 +21,6 @@ app.use("/api/auth", authRoute);
 app.use("/api/test", testRoute);
 app.use("/api/users", UserRoute);
 
-app.listen(8000, ()=>{
+app.listen(8008, ()=>{
     console.log("Server is running")
 })

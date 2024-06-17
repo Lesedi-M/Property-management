@@ -11,7 +11,7 @@ import ProfilePage from "./routes/profilePage/profilePage";
 import Login from "./routes/login/Login";
 import Register from "./routes/register/register";
 import NewPostPage from "./routes/newPostPage/newPostPage";
-import { listPageLoader, singlePageLoader } from "./lib/loaders";
+import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
 
 
 function App() {
@@ -36,7 +36,8 @@ function App() {
         },
         {
           path:"/profile",
-          element:<ProfilePage/>
+          element:<ProfilePage/>,
+          loader: profilePageLoader
         },
         {
           path:"/login",
